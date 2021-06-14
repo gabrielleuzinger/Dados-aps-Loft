@@ -29,22 +29,6 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.get("https://loft.com.br/apartamentos/sao-paulo-sp/")
 
-'''
-#filtrar aps em SP
-SP_botão = driver.find_elements_by_xpath('//*[@id="__next"]/section/div[1]/article/div/div[2]/div[2]/form/div/div[1]')[0]
-SP_botão.click()
-buscar_botão = driver.find_element_by_xpath('//*[@id="__next"]/section/div[1]/article/div/div[2]/div[2]/form/button')
-driver.execute_script("arguments[0].click();", buscar_botão)
-
-
-try:
-    buscar_botão = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="__next"]/section/div[1]/article/div/div[2]/div[2]/form/button')))
-finally:                                            
-    buscar_botão = driver.find_elements_by_xpath('//*[@id="__next"]/section/div[1]/article/div/div[2]/div[2]/form/button')[0]
-    print(buscar_botão)
-    buscar_botão.click()
-'''
-
 #dados_ap = pd.DataFrame(columns=['preço','endereço','área','quartos','vagas'])
 
 #pegar número total de bairros
@@ -132,68 +116,7 @@ for i in range(tot_bairros):
             pass
     
     driver.quit()
-    
-    '''
-    #filtrar próximo bairro
-    bairros_botão = driver.find_elements_by_xpath('//*[@id="__next"]/section/div/div/div[1]/div[2]/div/div/div[2]/div[2]/div')[0]
-    bairros_botão.click()
-    
-    sleep(1)
-    bairros = driver.find_elements_by_class_name('MuiTypography-root.MuiFormControlLabel-label.MuiTypography-body1')
-    #print(bairros[i-1].text)
-    bairros[i-1].click()
-    
-    #sleep(1)
-    print(i+1,bairros[i].text)
-    bairros[i].click()
-    
-    sleep(1)
-    filtro = driver.find_elements_by_xpath('/html/body/div[4]/div[3]/div/div[2]/button[2]')[0]
-    filtro.click()
-    #sleep(1)
-
-#pegar número de aps no último bairro
-aps = driver.find_element_by_xpath('//*[@id="__next"]/section/div/div/div[2]/section[1]/div/div[1]/div[1]/div[1]/div/span')
-while aps.text == '':
-    aps = driver.find_element_by_xpath('//*[@id="__next"]/section/div/div/div[2]/section[1]/div/div[1]/div[1]/div[1]/div/span')
-    if aps.text !='':
-        break
-aps_text = aps.text
-aps_len = int(aps_text)
-print(aps_text)
-resultados = []
-
-#loop para navegar pelas páginas com os aps
-while len(resultados)<aps_len:
-    try:
-        resultados = driver.find_elements_by_class_name('MuiCardContent-root.jss493')
-        try:
-            element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME,'ScrollTracker')))
-        finally:
-            target = driver.find_element_by_class_name('ScrollTracker')
-            actions = ActionChains(driver)
-            actions.move_to_element(target)
-            actions.perform()
-            #sleep(3)
-    except:
-        print('erro')
-        pass
-#print(len(resultados))
-    
-for k in range(len(resultados)):
-    try:
-        ap = resultados[k].text.split('\n')
-        #print(len(ap))
-        if len(ap)>5:
-            del ap[-1]
-            ap_ = pd.Series(ap, index = dados_ap.columns)
-            dados_ap = dados_ap.append(ap_, ignore_index=True)
-        else:
-            ap_ = pd.Series(ap, index = dados_ap.columns)
-            dados_ap = dados_ap.append(ap_, ignore_index=True)
-    except: 
-        print(ap) 
-        pass'''
+  
 ```
 
 
