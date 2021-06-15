@@ -8,7 +8,7 @@ Todas as dependências podem ser encontradas no arquivo `requirements.txt`, mas 
 
 Para instalar as dependências execute na pasta raiz do projeto: `pip install -r requirements.txt`. 
 
-Para acessar o Jupyter Notebook que criei, execute na pasta raiz do projeto `jupyter notebook`. Logo em seguida seu browser será aberto e basta selecionar o arquivo `Relatório Luiza Labs.ipynb`. 
+Para acessar o Jupyter Notebook que criei, execute na pasta raiz do projeto `jupyter notebook`. Logo em seguida seu browser será aberto e basta selecionar o arquivo `Web Scraping na Loft.ipynb`. 
 
 É importante frisar que os dados utilizados para este desafio não foram adicionados a este projeto. 
 
@@ -21,6 +21,7 @@ Para acessar o Jupyter Notebook que criei, execute na pasta raiz do projeto `jup
   |  |  |- Web Scraping na Loft.md
   |-data
   |- Web Scraping na Loft.ipynb
+  |- Data Cleaning Scraping na Loft.ipynb
   |- requirements.txt
 ```
 
