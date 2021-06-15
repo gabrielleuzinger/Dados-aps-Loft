@@ -21,7 +21,7 @@ Para acessar o Jupyter Notebook que criei, execute na pasta raiz do projeto `jup
   |  |  |- Web Scraping na Loft.md
   |-data
   |- Web Scraping na Loft.ipynb
-  |- Data Cleaning Scraping na Loft.ipynb
+  |- Data Cleaning dados Loft.ipynb
   |- requirements.txt
 ```
 
