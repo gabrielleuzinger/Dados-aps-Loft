@@ -1,6 +1,6 @@
-# Web Scraping de vagas de Data Science no Linkedin
+# Web Scraping de apartamentos na Loft
 
-Este notebook é parte das tarefas do curso de Data Science da [Awari](https://awari.com.br/). **O objetivo deste projeto é fazer o web scraping de vagas de Cientista de Dados em São Paulo no Linkedin e criar uma nuvem de palavras**.
+Este notebook é parte das tarefas do curso de Data Science da [Awari](https://awari.com.br/). **O objetivo deste projeto é fazer o web scraping de apartamentos em São Paulo no site da Loft e criar um data set com os dados coletados**.
 
 Foram recuperados 16380 apartamentos em 99 bairros de São Paulo.
 
@@ -116,7 +116,7 @@ for i in range(tot_bairros):
             pass
     
     driver.quit()
-  
+ 
 ```
 
 
