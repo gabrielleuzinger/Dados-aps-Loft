@@ -1,4 +1,6 @@
-Este repositório é parte das tarefas do curso de Data Science da Awari. O objetivo deste projeto é fazer uma calculadora de preço de apartamentos. Usamos como base os preços no site da [Loft](https://loft.com.br/). Este projeto foi montado seguindo as premissas de [Pesquisas Reprodutíveis](https://pt.coursera.org/learn/reproducible-research), de modo que qualquer pessoa consiga chegar aos mesmos resultados que eu utilizando os passos que segui no Jupyter Notebook.
+Este repositório é parte das tarefas do curso de Data Science da Awari. O objetivo deste projeto é fazer uma calculadora de preço de apartamentos. Usamos como base os preços no site da [Loft](https://loft.com.br/). **O projeto ainda está em construção.**
+
+Este projeto foi montado seguindo as premissas de [Pesquisas Reprodutíveis](https://pt.coursera.org/learn/reproducible-research), de modo que qualquer pessoa consiga chegar aos mesmos resultados que eu utilizando os passos que segui no Jupyter Notebook.
 
 # Dependências do projeto
 
